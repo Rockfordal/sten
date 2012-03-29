@@ -9,7 +9,6 @@ group :assets do
   gem 'coffee-script'
 end
 
-gem 'therubyracer'
 gem 'jquery-rails'
 gem 'inherited_resources'
 gem 'devise'
@@ -25,10 +24,12 @@ gem 'cockatoo'
 gem 'haml'
 gem 'slim-rails' # gem 'slim' #, '1.1.0'
 
-group :production do
+#gem 'therubyracer'
+
+#group :production do
  # gem 'therubyracer-heroku'
  # gem 'pg'
-end
+#end
 
 group :dev do
   gem 'nifty-generators'
