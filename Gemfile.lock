@@ -83,7 +83,6 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    memcache-client (1.8.5)
     mime-types (1.18)
     multi_json (1.2.0)
     mysql2 (0.3.11)
@@ -95,6 +94,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (>= 0.0.2)
       mime-types
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -168,10 +168,10 @@ DEPENDENCIES
   inherited_resources
   jquery-rails
   kaminari
-  memcache-client
   mysql2
   nifty-generators
   paperclip
+  pg
   rails
   sass-rails (~> 3.2.3)
   simple-navigation
