@@ -1,0 +1,45 @@
+class EnergiesController < ApplicationController
+load_and_authorize_resource
+  def index
+    @energies = Energy.all
+  end
+  
+  def show
+    @energy = Energy.find(params[:id])
+  end
+  
+  def new
+    @energy = Energy.new
+  end
+  
+  def create
+    @energy = Energy.new(params[:energy])
+    if @energy.save
+      flash[:notice] = "Successfully created energy."
+      redirect_to @energy
+    else
+      render :action => 'new'
+    end
+  end
+  
+  def edit
+    @energy = Energy.find(params[:id])
+  end
+  
+  def update
+    @energy = Energy.find(params[:id])
+    if @energy.update_attributes(params[:energy])
+      flash[:notice] = "Successfully updated energy."
+      redirect_to @energy
+    else
+      render :action => 'edit'
+    end
+  end
+  
+  def destroy
+    @energy = Energy.find(params[:id])
+    @energy.destroy
+    flash[:notice] = "Successfully destroyed energy."
+    redirect_to energies_url
+  end
+end

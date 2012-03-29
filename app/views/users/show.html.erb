@@ -1,0 +1,20 @@
+<p>
+  <b>Epost:</b>
+  <%=h @user.email %>
+  <%#=in_place_editor_field :user, :email, {}, :rows => 4, :external_control => "activator" %>
+</p>
+
+<p>
+  <b>Roller:</b>
+  <% @user.roles.each do |roll| -%>
+    <%= roll.name %>
+  <% end -%>
+</p>
+
+<p><table><tr>
+    <td class="nobg"><%= button_to "Ändra", edit_user_path(@user), :method => :get %></td>
+    <td class="nobg"><%= button_to "Radera", @user, :confirm => 'Är du säker?', :method => :delete %></td>
+    <td class="nobg"><%= button_to "Visa alla", users_path, :method => :get %></td>
+</tr>
+</table>
+</p>

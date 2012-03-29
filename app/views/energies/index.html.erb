@@ -1,0 +1,17 @@
+<% cache("en") do %>
+<br>
+<table>
+  <tr>
+    <th>Namn</th>
+    <th>Beskrivning</th>
+  </tr>
+  <% for energy in @energies %>
+    <tr>
+      <td><%= link_to energy.name, energy %></td>
+      <td align="center"><%  if energy.desc.presence %>ja<%else%>nej<%end%></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= button_to "Ny Energi", [:new, energy], :method => 'get' if can? :create, Energy %></p>
+<% end %>

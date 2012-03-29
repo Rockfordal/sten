@@ -1,0 +1,15 @@
+<h2>Ny användare</h2>
+
+<%= render :partial => 'form' %>
+
+<%# for role in Role.all %>
+<%#<div> %>
+  <%#= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+  <%#= role.name %>
+<%#</div> %>
+<%# end %>
+
+<%#= hidden_field_tag "user[role_ids][]", "" %>
+<br>
+<%# Registrering tyvärr inte tillåten. %>
+<%= button_to 'Tillbaka', users_path %>

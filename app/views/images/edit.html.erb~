@@ -1,0 +1,11 @@
+<% title "Ändra bild" %>
+
+
+<%- semantic_form_for @city do |f| -%>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => {:f => f}  %>
+<%- end -%>
+
+<p>
+  <%= link_to "Visa", @image %> |
+  <%= link_to "Visa alla", images_path %>

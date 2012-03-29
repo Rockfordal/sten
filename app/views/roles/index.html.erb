@@ -1,0 +1,20 @@
+<h2>Roller</h2>
+
+<table>
+  <tr>
+    <th>Namn</th>
+    <th>Beskrivning</th>
+  </tr>
+  <% for role in @roles -%>
+    <tr>
+      <td><%= role.name %></td>
+      <td><%= role.beskrivning %></td>
+      <td class="nobg"><%= button_to "Visa", role, :method => :get %></td>
+      <td class="nobg"><%= button_to "Ändra", edit_role_path(role), :method => :get %></td>
+      <td class="nobg"><%= button_to "Radera", role, :confirm => 'Är du säker?', :method => :delete %></td>
+    </tr>
+<% end -%>
+</table>
+
+<p><%= button_to "Ny Roll", new_role_path %></p>
+

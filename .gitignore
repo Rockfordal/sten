@@ -1,0 +1,7 @@
+.bundle
+db/*.sqlite*
+db/*.sql
+log/*.log
+tmp/**/*
+config/database.yml
+public/assets/**

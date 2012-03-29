@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) || "Stenar" %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%#= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+
+<div id="example_2" class="example_content">
+  <div id="top_navigation"><%= render_navigation(:expand_all => true) %></div>
+ <div class="content">
+  <div class="breadcrumbs">
+   <%#= render_navigation(:renderer => :breadcrumbs, :join_with => ' &raquo; ') %>
+  </div>
+      <%# flash.each do |name, msg| %>
+        <%#= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%# end %>
+      <div class="notice"><%= notice %></div>
+      <%= content_tag :h1, yield(:title) %>
+<%# if show_title? %>
+      <%= yield %>
+ </div>
+</div>
+  <%#= javascript_include_tag 'application' %>
+  </body>
+</html>

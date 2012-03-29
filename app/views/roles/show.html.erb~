@@ -1,0 +1,18 @@
+<% title "Roll" %>
+
+<p>
+  <strong>Namn:</strong>
+  <%=h @role.name %>
+</p>
+<p>
+  <strong>Beskrivning:</strong>
+  <%=h @role.beskrivning %>
+</p>
+
+<p><table><tr>
+    <td class="nobg"><%= button_to "Ändra", edit_role_path(@role), :method => :get %></td>
+    <td class="nobg"><%= button_to "Radera", @role, :confirm => 'Är du säker?', :method => :delete %></td>
+    <td class="nobg"><%= button_to "Visa alla", roles_path, :method => :get %></td>
+</tr>
+</table>
+</p>

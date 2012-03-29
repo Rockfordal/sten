@@ -1,0 +1,6 @@
+<h1>Ändrar  sten</h1>
+
+<%= render 'form' %>
+<%= button_to 'Visa', @gemstone, :method => 'get' %>
+<%= button_to 'Radera', @gemstone, :confirm => 'Är du säker?', :method => :delete %>
+<%= button_to 'Tillbaka', gemstones_path, :method => 'get' %>

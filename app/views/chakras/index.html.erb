@@ -1,0 +1,20 @@
+<% cache("ci") do %>
+<br>
+<table>
+  <tr>
+    <th>Namn</th>
+    <th>Nr</th>
+    <th></th>
+  </tr>
+  <% for chakra in @chakras %>
+    <tr>
+      <td><%= link_to chakra.name, chakra %></td>
+      <td><%= chakra.nr %></td>
+    </tr>
+  <% end %>
+    <td><td rowspan="7">
+</table>
+<br>
+
+<br><%= button_to "Nytt Chakra", [:new, chakra], :method => 'get' if can? :create, Chakra %>
+<% end %>

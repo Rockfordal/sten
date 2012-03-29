@@ -1,0 +1,38 @@
+cockatoo: process with pid 20832 started.
+ INFO cockatoo: Mon Aug 01 22:20:55 +0200 2011 Starting server on port 9000
+ERROR cockatoo: Mon Aug 01 22:21:06 +0200 2011 Warning: strange request ["get", nil, nil]
+ERROR cockatoo: Mon Aug 01 22:21:08 +0200 2011 Warning: strange request ["mja", nil, nil]
+cockatoo: process with pid 21353 started.
+ INFO cockatoo: 2011-08-01 22:29:16 +0200 Starting server on port 8000
+ERROR cockatoo: 2011-08-01 22:29:20 +0200 Warning: strange request ["get", nil, nil]
+ INFO cockatoo: 2011-08-01 22:33:46 +0200 request on /chat with 
+ INFO cockatoo: 2011-08-01 22:33:52 +0200 request on /chat with 
+ INFO cockatoo: 2011-08-01 22:34:06 +0200 request on /chat with 
+ERROR cockatoo: 2011-08-01 22:34:16 +0200 Error: undefined method `split' for nil:NilClass
+ERROR cockatoo: 	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/cockatoo-0.1/lib/cockatoo_http_server.rb:64:in `receive_data'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run_machine'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/cockatoo-0.1/lib/cockatoo_daemon.rb:15:in `block in <top (required)>'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/cockatoo-0.1/lib/cockatoo_daemon.rb:9:in `loop'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/cockatoo-0.1/lib/cockatoo_daemon.rb:9:in `<top (required)>'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons/application.rb:202:in `load'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons/application.rb:202:in `start_load'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons/application.rb:295:in `start'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons/controller.rb:70:in `run'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons.rb:145:in `block in run'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons/cmdline.rb:109:in `call'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/daemons-1.1.4/lib/daemons.rb:144:in `run'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/gems/cockatoo-0.1/bin/cockatoo:6:in `<top (required)>'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/bin/cockatoo:19:in `load'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/bin/cockatoo:19:in `<main>'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/bin/bundler_wrapper:22:in `eval'
+	/home/andersl/.rvm/gems/ruby-1.9.3-head/bin/bundler_wrapper:22:in `<main>'
+ INFO cockatoo: 2011-08-01 22:34:16 +0200 Starting server on port 8000
+ERROR cockatoo: 2011-08-01 22:34:21 +0200 Warning: strange request ["wer", nil, nil]
+ERROR cockatoo: 2011-08-01 22:34:27 +0200 Warning: strange request ["wer", nil, nil]
+cockatoo: process with pid 21468 started.
+ INFO cockatoo: 2011-08-01 22:40:58 +0200 Starting server on port 8000
+ INFO cockatoo: 2011-08-01 22:41:49 +0200 request on /chat.js with 
+ INFO cockatoo: 2011-08-01 23:04:55 +0200 request on /chat.html with 
+ INFO cockatoo: 2011-08-01 23:04:58 +0200 request on /chat.html.haml with 

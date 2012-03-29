@@ -1,0 +1,21 @@
+<%# <h1>Länktyper</h1> %>
+<br>
+<table>
+  <tr>
+    <th>Namn</th>
+    <th>Ikon</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @linktypes.each do |linktype| %>
+  <tr>
+    <td><%= link_to linktype.name, linktype %></td>
+    <td><%= linktype.iconurl %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= button_to 'Ny länktyp', new_linktype_path, :method => 'get'  if can? :create, Linktype  %>

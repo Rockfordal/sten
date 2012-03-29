@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Namn:</b>
+  <%= @gemstone.name %>
+</p>
+
+<p>
+  <b>Beskrivning:</b><br>
+  <%= @gemstone.desc %>
+</p>
+
+<p>
+  <b>Chakran</b>
+  <% for chakra in @gemstone.chakras %>
+  <li><%= chakra.name %>
+<% end %>
+</p>
+
+<p>
+  <b>Energier</b>
+  <% for energy in @gemstone.energies %>
+<li><%= energy.name %></li>
+<% end %>
+</p>
+
+<p>
+  <b>Länkar</b>
+  <% for link in @gemstone.links %>
+  <li><%= link_to image_tag(link.linktype.iconurl, :border => 0), link.url %>
+      <%= link_to link.url, link.url %></li>
+  <% end %>
+</p>
+
+<p>
+  <b>Bilder</b>
+</p>
+  <% if @gemstone.id == 26 %>
+  <%= link_to image_tag("http://www.kristallhuset.se/images/Stenar_kristaller/Jet_liten.jpg"), "http://www.kristallhuset.se/images/Stenar_kristaller/Jet_stor.jpg" %>
+  <%# else %>
+  <%#= link_to image_tag %>
+  <% end %>
+
+<p>
+  <b>Egenskaper</b>
+<% for property in @gemstone.properties %>
+  <li><%= property.name %>
+<% end %>
+</p>
+
+<p>
+  <b>Ägande</b>
+  <%#='jag har denna' if @gemstone.users.find_by_id(current_user) %>
+</p>
+
+<p>
+  <b>Inmatad</b>
+  <%= @gemstone.created_at %>
+  <%#= @gemstone.creator.name if @gemstone.creator.presence %>
+</p>
+
+<p>
+  <b>Uppdaterad</b>
+  <%= @gemstone.updated_at %>
+  <%#= @gemstone.users.find_by_id(@gemstone.creator_id) %>
+</p>
+
+
+<%= link_to 'Ändra', edit_gemstone_path(@gemstone)  if can? :update, Gemstone %>
+<%= link_to 'Radera', @gemstone, :confirm => 'Är du säker?', :method => :delete if can?  :destroy, Gemstone %>
+<%= link_to 'Tillbaka', gemstones_path %>

@@ -1,0 +1,19 @@
+<%# <h2>Användare</h2> %>
+<br>
+<table>
+  <tr>
+    <th>E-post</th>
+  </tr>
+  
+  <% for user in @users -%>
+  <tr>
+    <td><%= user.email %></td>
+
+    <td class="nobg"><%= button_to 'Visa', user, :method => :get %></td>
+    <td class="nobg"><%= button_to 'Ändra', edit_user_path(user), :method => :get %></td>
+    <td class="nobg"><%= button_to 'Radera', user, :confirm => 'Är du säker?', :method => :delete %></td>
+  </tr>
+<% end -%>
+</table>
+
+<%= button_to 'Ny användare', :controller => 'users', :action => 'new' %>

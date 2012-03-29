@@ -1,0 +1,25 @@
+<%= form_for(@linktype) do |f| %>
+  <% if @linktype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@linktype.errors.count, "error") %> prohibited this linktype from being saved:</h2>
+
+      <ul>
+      <% @linktype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :namn %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label 'ikonbild' %><br />
+    <%= f.text_field :iconurl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

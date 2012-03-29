@@ -1,0 +1,361 @@
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: gemstone_dev
+-- ------------------------------------------------------
+-- Server version	5.0.88
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO,ANSI' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table "chakras"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "chakras" (
+  "id" int(11) NOT NULL,
+  "name" varchar(255) NOT NULL,
+  "nr" int(10) NOT NULL,
+  "desc" text NOT NULL,
+  "created_at" datetime default NULL,
+  "updated_at" datetime default NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "chakras"
+--
+
+INSERT INTO "chakras" VALUES (1,'Bas/Rot chakrat',1,'Placering:\r\nBakom könsorganen.\r\n\r\nKropp:\r\nFysisk\r\n\r\nSymboliserar:\r\nRött står för hur \"jordade\" vi är. Även sexualdriften och förmågan att överleva står detta chakra för. Vid livshotande situationer öppnar det sig för fullt och kan ta emot en stark energiström. Detta är kopplat till immunförsvaret och det genetiska. Det har sitt fäste på svanskotan. Det kontrollerar luktsinne och har hand om utdrivningen av kroppens grumligheter och slaggprodukter.\r\n\r\nKroppsdelar:\r\nUrinvägs- och fortplantningsorganen och huden m.m.\r\n\r\nBlockeringar kan orsaka problem med:\r\nBarnlöshet, menstrationsproblem, värk i nedre delen av ryggen, ben och fötter samt underlivet. Tvångsbeteenden, urinvägs- och fortplantnings- problem, hudproblem, tvångstankar och sexuella problem. ','2010-09-16 10:50:19','2010-10-08 05:33:25');
+INSERT INTO "chakras" VALUES (2,'Navelchakrat',2,'Placering:\r\nDet sitter cirka 3 fingrar under navel.\r\n\r\nKropp:\r\nKänslo\r\n\r\nSymboliserar:\r\nOrange står för den sexuella förmågan, fortplantningssystemet, självförtroende och välbefinnande. Det kontrollerar smaksinnet, urinorganens förmåga, tunntarm, tjocktarms och könsorganens funktion.\r\n\r\nKroppsdelar:\r\nMag- och tarmområdet, bäckenet, testiklar, livmoder och äggstockar m.m.\r\n\r\nBlockeringar kan orsaka problem med:\r\nMag- och tarmområdet, bäckenet, testiklar, livmoder och äggstockarna.','2010-09-16 10:51:16','2010-10-08 05:34:01');
+INSERT INTO "chakras" VALUES (3,'Solar Plexuschakrat',3,'Placering:\r\nDet sitter mitt i magen kan man säga ca 7 fingrar ovanför naveln.\r\n\r\nKropp:\r\nMental\r\n\r\nSymboliserar:\r\nGult står för styrningen av energier i kroppen. All negativitet finns här som svartsjuka, snålhet, egoism, girighet. De positiva är förälskelse och kärlek.\r\n\r\nKroppsdelar:\r\nMagsäcken, njurar, binjurar, mjälte, lever, bukspottkörteln, gallblåsa och blindtarmen m.m.\r\n\r\nBlockeringar kan orsaka problem med:\r\nMatsmältningsproblem, vikt och förbränningproblem, Problem med magsäcken, njurar, binjurar, mjälte, lever, bukspottskörteln, gallblåsa och blindtarmen.','2010-10-08 03:47:05','2010-10-08 05:34:15');
+INSERT INTO "chakras" VALUES (4,'Hjärtchakrat',4,'Placering:\r\nDet sitter lite ovanför hjärtat mellan bröstvårtorna.\r\n\r\nKropp:\r\nAstral\r\n\r\nSymboliserar:\r\nGrönt och Rosa står för kärlek och medkänsla. Påverkar även hjärtats funktion och blodomloppet. Ju öppnare hjärtchakra man har ju mer medkänsla har man för andra människor.\r\n\r\nKroppsdelar som hör till chakrat:\r\nHjärtat, bröstet, lungorna och lymfan. \r\n\r\nBlockeringar kan orsaka problem med:\r\nHjärt- och lungproblem. Astma, allergier, relationsproblem m.m.','2010-10-08 03:48:18','2010-10-08 05:34:35');
+INSERT INTO "chakras" VALUES (5,'Halschakrat',5,'Placering:\r\nSitter på halsen vid sköldkörteln.\r\n\r\nKropp:\r\nEter\r\n\r\nSymboliserar:\r\nHalschakrat står för kreativitet och kommunikation. Det är ju precis emellan kroppen och huvudet. Ofta säger huvudet en sak och hjärtat en annan. Det är då man hamnar i en konflikt med sig själv och det är då som halschakrat bestämmer vad som skall bestämmas. Oftast är konflikten så stor att vi inte säger någonting, då blockerar man energin effektivt.\r\n\r\nKroppsdelar:\r\nHalsen, strupen, munnen (käken och tänderna), axlar, sköldkörteln och öronen.\r\n\r\nBlockeringar kan leda till nackspänningar, halsont, nackspärr, spänningshuvudvärk och ämnes omsätt- ningsproblem. Blockeringar här kan leda till att vi tycker att livet är enformigt och tråkigt. Kan även ge kommunikationsproblem och oförmåga att uttrycka sig eller att sätta gränser.','2010-10-08 03:49:30','2010-10-08 05:34:54');
+INSERT INTO "chakras" VALUES (6,'Pannchakrat (Tredje Ögat)',6,'Placering:\r\nSitter mellan ögonbrynen och cirka 2 fingerbredder upp mot pannan.\r\n\r\nKropp:\r\nBuddha\r\n\r\nSymboliserar:\r\nTredje ögat står för intuition, klärvoajans och medialitet. Aktiverar hjärnan och påverkar det undermedvetna. Om man har ett utvecklat pannchakra kan det leda till att man ser i bilder eller färger när man pratar med andra människor eller att man kan se auror. De flesta barn är födda med denna förmåga att kunna se auror runt omkring andra människor, men oftast så säger vuxna människor till dem att det bara är fantasier. Och då glömmer de den förmågan för det är behagligast och så skapas en blockering.\r\n\r\nKroppsdelar som hör till chakrat:\r\nHormonkörtlarna, hypofysen, vänster öga, näsa, tinningarna och tillväxten.\r\n\r\nBlockeringar kan orsaka problem med:\r\nBlockeringarna kan göra så att man känner sig förvirrad och inte kan hitta sin rätta väg och veta vart den leder. Sjukdomar som man kan få till följd av blockeringar här är hjärntumörer, blindhet, migrän, bihåleinflammation, nervositet och inlärningsproblem. ','2010-10-08 03:51:38','2010-10-08 05:35:08');
+INSERT INTO "chakras" VALUES (7,'Kronchakrat',7,'Placering:\r\nMitt ovanför fontanellen på huvudet.\r\n\r\nKropp:\r\nKausal\r\n\r\nSymboliserar:\r\nSymboliserar kontakten med universum och Ditt högre jag. Kronchakrat har 992 st kronblad och jämför man det med pannchakrat som bara har 96 lotusblad kan man förstå hur mycket mäktigare detta chakra är i jämförelse med de andra. Om vi utvecklar de andra chakrana så utvecklas detta normalt sig själv. Ett av kronchakrats uppgifter är att skapa sammanhang i alla våra andra chakra.\r\n\r\nKroppsdelar som hör till chakrat:\r\nHuvudet och tallkottskörteln (epifysen). Immunsystemet. Höger öga.\r\n\r\nBlockeringar kan orsaka problem med:\r\nSjukdomar som vi kan få om det finns en blockering kan vara bl.a. nervsjukdomar, förlamningar, genetiska sjukdomar m.m. ','2010-10-08 03:52:28','2010-10-08 05:35:32');
+
+--
+-- Table structure for table "chakras_gemstones"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "chakras_gemstones" (
+  "chakra_id" int(10) default NULL,
+  "gemstone_id" int(10) default NULL
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "chakras_gemstones"
+--
+
+INSERT INTO "chakras_gemstones" VALUES (4,16);
+INSERT INTO "chakras_gemstones" VALUES (5,16);
+INSERT INTO "chakras_gemstones" VALUES (6,24);
+INSERT INTO "chakras_gemstones" VALUES (7,24);
+INSERT INTO "chakras_gemstones" VALUES (4,10);
+INSERT INTO "chakras_gemstones" VALUES (5,23);
+INSERT INTO "chakras_gemstones" VALUES (1,15);
+INSERT INTO "chakras_gemstones" VALUES (5,20);
+INSERT INTO "chakras_gemstones" VALUES (4,20);
+INSERT INTO "chakras_gemstones" VALUES (5,14);
+INSERT INTO "chakras_gemstones" VALUES (1,11);
+INSERT INTO "chakras_gemstones" VALUES (2,11);
+INSERT INTO "chakras_gemstones" VALUES (3,11);
+INSERT INTO "chakras_gemstones" VALUES (4,11);
+INSERT INTO "chakras_gemstones" VALUES (5,11);
+INSERT INTO "chakras_gemstones" VALUES (6,11);
+INSERT INTO "chakras_gemstones" VALUES (7,11);
+INSERT INTO "chakras_gemstones" VALUES (3,15);
+INSERT INTO "chakras_gemstones" VALUES (3,21);
+INSERT INTO "chakras_gemstones" VALUES (1,17);
+INSERT INTO "chakras_gemstones" VALUES (4,31);
+INSERT INTO "chakras_gemstones" VALUES (3,18);
+INSERT INTO "chakras_gemstones" VALUES (4,18);
+INSERT INTO "chakras_gemstones" VALUES (6,18);
+INSERT INTO "chakras_gemstones" VALUES (5,42);
+INSERT INTO "chakras_gemstones" VALUES (4,35);
+INSERT INTO "chakras_gemstones" VALUES (1,26);
+INSERT INTO "chakras_gemstones" VALUES (4,26);
+INSERT INTO "chakras_gemstones" VALUES (2,22);
+
+--
+-- Table structure for table "colors"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "colors" (
+  "id" int(11) NOT NULL,
+  "name" varchar(255) NOT NULL,
+  "desc" text NOT NULL,
+  "created_at" datetime default NULL,
+  "updated_at" datetime default NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "colors"
+--
+
+INSERT INTO "colors" VALUES (1,'Röd','','2010-10-06 09:33:56','2010-10-06 09:33:56');
+INSERT INTO "colors" VALUES (2,'Grön','','2010-10-06 09:34:04','2010-10-06 09:34:04');
+INSERT INTO "colors" VALUES (3,'Vilolet','','2010-10-08 05:37:35','2010-10-08 05:37:35');
+INSERT INTO "colors" VALUES (4,'Indigo','','2010-10-08 05:37:47','2010-10-08 05:37:47');
+INSERT INTO "colors" VALUES (5,'Blå','Lugnande.\r\n','2010-10-08 05:49:01','2010-10-08 11:57:01');
+INSERT INTO "colors" VALUES (6,'Gul','','2010-10-08 05:49:16','2010-10-08 05:49:16');
+INSERT INTO "colors" VALUES (7,'Orange','','2010-10-08 05:49:22','2010-10-08 05:49:22');
+
+--
+-- Table structure for table "energies"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "energies" (
+  "id" int(11) NOT NULL,
+  "name" varchar(255) NOT NULL,
+  "desc" text,
+  "created_at" datetime default NULL,
+  "updated_at" datetime default NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "energies"
+--
+
+INSERT INTO "energies" VALUES (1,'Yin','','2010-10-08 04:36:45','2010-10-08 04:36:45');
+INSERT INTO "energies" VALUES (2,'Yang','','2010-10-08 04:36:58','2010-10-08 04:36:58');
+
+--
+-- Table structure for table "energies_gemstones"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "energies_gemstones" (
+  "gemstone_id" int(10) NOT NULL,
+  "energy_id" int(10) NOT NULL
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "energies_gemstones"
+--
+
+INSERT INTO "energies_gemstones" VALUES (42,1);
+INSERT INTO "energies_gemstones" VALUES (35,1);
+INSERT INTO "energies_gemstones" VALUES (26,1);
+INSERT INTO "energies_gemstones" VALUES (25,1);
+INSERT INTO "energies_gemstones" VALUES (22,2);
+
+--
+-- Table structure for table "gemstones"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "gemstones" (
+  "id" int(11) NOT NULL,
+  "name" varchar(255) NOT NULL,
+  "desc" text NOT NULL,
+  "color_id" int(10) default NULL,
+  "created_at" datetime default NULL,
+  "updated_at" datetime default NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "gemstones"
+--
+
+INSERT INTO "gemstones" VALUES (6,'Peridot/Olivin/Krysolit','* Hjärtchakrat - Yin *\r\nKärlek är healing och denna lilla gröna och klara sten kan inspirera dig att ge lugn till emotioner och hjärta. Den sägs ha en bra effekt på matsmältningen och magen där vi gömmer våra känslor som vi inte tror att vi får känna eller uttrycka. Acceptera först dina känslor - Att de finns och lär dig sakta leva med dem - Det är olivinens budskap.',NULL,'2010-10-03 09:57:17','2010-10-03 10:08:18');
+INSERT INTO "gemstones" VALUES (7,'Lapis Lazuli','* Pannchakrat - Yin *\r\nLapis Lazuli symboliserar tankens kraft. Den är bra för alla som anser sig förvirrade och blyga och som saknar kraft att handla efter sina planer och fullfölja sina idéer. Den stärker och balanserar dina mentala kvalitéer och hjälper dig att betrakta det virrvarr av tanken, idéer och måsten som flyger runt i ditt sinne och som saknar kontakt med verklighetens HÄR och NU.',NULL,'2010-10-03 10:01:57','2010-10-03 10:08:53');
+INSERT INTO "gemstones" VALUES (8,'Turkos','* Halschakrat - Yin *\r\nTurkosen symboliserar vördnaden inför livet. Bär den eller meditera med den då du vill vara ödmjuk och livbejakande inför livet i sig självt och inför de konsekvenser denna sanning innebär. Turkosen kan inspirera dig att våga släppa taget och låta den universiella kärleken blåsa iväg med ditt eget, din begränsade personlighet och verkligen upptäcka vad som är din gåva.',NULL,'2010-10-03 10:03:38','2010-10-03 10:08:36');
+INSERT INTO "gemstones" VALUES (9,'Mossagat','* Hjärtchakrat - Yin *\r\nMossagaten är en djup lugnande och helande sten. Den lägger sig som balsam på upprörda känslor och sargade själar. Den stimulerar dig att ta hand om dig själv och din kropp. Mossagaten påminner oss om naturens eviga visdom och balanserar oss vid fysisk eller psykisk \"överhettning\". För den som bara vill vara lugn som en filbunke är Mossagaten bra.',NULL,'2010-10-03 10:05:23','2010-10-03 10:07:13');
+INSERT INTO "gemstones" VALUES (10,'Äppelgrön Aventurin','* Högre hjärtchakra * \r\nEn Himmel-sten. Ger inre styrka och självtillit. Positiv sten. Balanserande. Lugnande. Bra mot elektromagnetisk strålning. En All-Healande-sten. Lyckosten nummer 1.',NULL,'2010-10-03 10:06:42','2010-10-03 10:06:42');
+INSERT INTO "gemstones" VALUES (11,'Bergskristall','Bergskristallen är \"mästaren\" bland stenar. En ren, klar och energigivande sten. Den hjälper dig att fokusera din medvetenhet och transformera din negativitet som hindrar dig i ditt liv. Den förstärker din energi och kan användas för healing, meditation eller personlig och andlig utveckling genom terapi. Den kan programmeras för bestämda systen med hjälp av kreativ visualisering.',NULL,'2010-10-03 10:11:32','2010-10-08 05:10:12');
+INSERT INTO "gemstones" VALUES (12,'Rökkvarts','* Baschakrat - Yang *\r\nRökkvartsen representerar jorden och har en förmåga att grunda eller jorda energier. För den som \"flyger omkring\" med luftiga teorier om livet, men aldrig känner sin kropp eller sina känslor kan den vara en hjälp att landa. Den är balanserande för den som är överdrivet fixerad vid det materiella och den absorberar negativ energi i det första chakrat. Går du igenom förändringar i ditt liv som behöver stabiliseras är rökkvarts en utmärkt sten att meditera med.',NULL,'2010-10-03 10:13:47','2010-10-03 10:13:47');
+INSERT INTO "gemstones" VALUES (13,'Sodalit','* Hals- och pannchakrat - Yin *\r\nSodalit är en sten för dig som längar efter stillhet och lugn. Den är en bärare av oändligt tålamod och den smittar ditt sinne med denna tålmodiga energi så att det slappnar av och kan börja lyssna inåt på vår intuition och visdom. Sodaliten kan du använda när du vill hämta inspiration och kraft ur ett tillstånd av närvaro till att förstå och acceptera livet som det är.',NULL,'2010-10-03 10:15:38','2010-10-03 10:15:38');
+INSERT INTO "gemstones" VALUES (14,'Blå kalcedon','Symboliserad barmhärtighetens inre flamma. Beskyddande. Tålmodidghet. Utveckligar våra feminina sidor. Lugnande. Renande. Sätter gränser. Underlättar för rätta beslut.',NULL,'2010-10-03 10:16:42','2010-10-08 05:19:18');
+INSERT INTO "gemstones" VALUES (15,'Bronsit','Stimulerar fysisk såväl som fysisk uterensning och aktivitet. Beskyddande i en belastande atmosfär. Påverkar vårt hörselsinne och förnimelse av faror och djud. Bra för sångare och musiker.\r\n',NULL,'2010-10-03 10:18:14','2010-10-08 05:20:44');
+INSERT INTO "gemstones" VALUES (16,'Amazonit','Amazoniten ökar medvetenheten om våra känslor och handlingar gentemot andra människor. Det är en sten för den som vill gå en egen väg och själv ta ansvar för sitt liv. Den är stödjande för all slags förändring. Amazoniten är för den som vill och har tålamod att bryta upp och välja en ny väg i samklang med vårt hjärtas innersta önskan.',NULL,'2010-10-03 10:20:05','2010-10-08 05:00:54');
+INSERT INTO "gemstones" VALUES (17,'Granat','Granaten för oss närmare Moder Jord och vår urkraft. Den stimulerar vår livskraft och sexualitet. Granaten ger oss kontakt med den gudomliga urkraften inom varje människa och ger oss lust, styrka och mod att uttrycka vår fullkomlighet.',NULL,'2010-10-03 10:22:05','2010-10-08 05:22:24');
+INSERT INTO "gemstones" VALUES (18,'Grön Kalcit','Släpper gamla ångestbegrepp från barndom eller tidigare liv.\r\n',NULL,'2010-10-03 10:54:58','2010-10-08 05:24:31');
+INSERT INTO "gemstones" VALUES (42,'Akvamarin','Akvamarin ger renhet, klarhet, enkelhet och mod i vår kommunikation med omvärlden. Den hjälper dig att \"flöda över\" och bjuda din omgivning på friskt vatten. Låt dina känslor springa fram inom dig som en källa till insikt och ärlighet. Låt dig själv komma till tals, uttryck i det hav av fantasi, leklust och skapandeförmåga som akvamarinen inbjuder till.',NULL,'2010-10-08 07:38:18','2010-10-08 07:38:18');
+INSERT INTO "gemstones" VALUES (19,'Turmalinkvarts','* Kronchakra *\r\nPolariserande. Balanserar auran. Löser upp blockeringar. Representerar YIN och YANG inom oss',NULL,'2010-10-03 15:31:45','2010-10-03 15:31:45');
+INSERT INTO "gemstones" VALUES (20,'Blågrön Opalit','Målinriktad sten. Allt accelererar snabbare runtomkring. Människor strömmar in i ens liv. \"Smid medan järnet är varmt\" -sten.\r\n',NULL,'2010-10-03 15:33:49','2010-10-08 05:19:37');
+INSERT INTO "gemstones" VALUES (21,'Citrin','Citrin är en glad och positiv sten som stimulerar oss till att se det positiva i tillvaron. Den hjälper oss att komma till uttryck i sociala sammanhang. Ha roligt och att kunna skratta och leka. Den kan bäras som amulett för att stärka självkänslan och tillit till den egna förmågan att skapa, leka och busa. Den som behöver bryta mönster och göra upp med det förflutnas begränsningar kan bära citrin.',NULL,'2010-10-04 08:47:31','2010-10-08 05:22:00');
+INSERT INTO "gemstones" VALUES (22,'Karneol','Karneol är en sten för kreativitet, Mod och styrka. Den hjälper livslusten att blomstra och att komma till sin kreativa potential. Den hjälper oss att samla oss, få kontakt med magen och lyssna vart vår egen kraft är på väg. Den kan bäras som skydd vid graviditet och när negativa skapar ojämnlika och medberoende relationer. Det är en bra sten för handling utifrån vår egen sanning.',NULL,'2010-10-04 08:49:34','2010-10-08 11:53:18');
+INSERT INTO "gemstones" VALUES (23,'Azurit','Azurit är bra för beslutsfattandet. Den kan hjälpa dig att tränga djupt in i ditt sinnes alla gömda vrår för att se vad som ligger bakom alla idéer du har. Den är som en frisk källa som vill väcka dig ur din slummer. Azuritens manliga, penetrerande energi kräver vakenhet, sanning och djup.',NULL,'2010-10-04 08:51:59','2010-10-08 05:09:49');
+INSERT INTO "gemstones" VALUES (24,'Ametist','Ametisten är djup och lugnande för tankar och känslor och är bra mot huvudvärk och sömnproblem. Den kan också användas som skyddande amulet mot negativitet och stress. Ametisten är en sten med starka renande vibrationer och passar mycket bra att använda vid meditation och healing. Den förmedlar kontakten med vår intuition och vårt högre jag.',NULL,'2010-10-04 08:53:21','2010-10-08 05:01:10');
+INSERT INTO "gemstones" VALUES (25,'Regnbågsmånsten','* Kronchakra ovan *\r\nSöker upp obalans i auran och obalans i chakrana ovan huvudet. Den arbetar på vår själsliga sida. Den stärker också det endokrina systemet. ',NULL,'2010-10-04 08:54:59','2010-10-08 09:34:12');
+INSERT INTO "gemstones" VALUES (26,'Jet','Skyddande mot faror och hjälper att bearbeta ångest. Ökar uppmärksamheten. Bra vid nya projekt. Bra hjälp vid pengabrist. Med jet på rot-, hjärt- och kronchakran lyfts energin och får dig se din ångest och dina begränsningar.',NULL,'2010-10-04 08:58:21','2010-10-08 08:31:12');
+INSERT INTO "gemstones" VALUES (27,'Nefrit','* Hjärtchakrat Yin * \r\nGer trygghet, beskydd. Hjärt- och avstressningssten som rensar ut negativa tankar. Skyddssten. Balanserar manligt och kvinnligt. Bra för njurar.',NULL,'2010-10-04 08:59:44','2010-10-04 08:59:44');
+INSERT INTO "gemstones" VALUES (28,'Honungskalcit','* Kron- och solarplexuschakra Yang *\r\nFördjupar intellektet, minne och visdom. Samlar energier. Förenar högre principer med jordnära känslor. ',NULL,'2010-10-04 09:01:09','2010-10-04 09:01:09');
+INSERT INTO "gemstones" VALUES (29,'Howlit','* Kron- och pannchakra - Yin *\r\nLjuset och mörker. Kreativitet. Konstnärssten. Inspirerande. Tillför maskulin energi. Ger klarhet och synskhet. ',NULL,'2010-10-04 09:02:22','2010-10-04 09:02:22');
+INSERT INTO "gemstones" VALUES (30,'Rosa kalcit','* Hjärtchakrat *\r\n\r\nLugnande. Löser upp gammal rädsla och sorg. Integrerar kärlek till alla energicentra var den än placerar på kroppen. ',NULL,'2010-10-04 09:03:44','2010-10-04 09:03:44');
+INSERT INTO "gemstones" VALUES (31,'Grön Apofyllit','Hjälper oss att befästa vår tillit till kärlekens helande och skapande kraft. Den helar auran även från karman.',2,'2010-10-04 09:04:36','2010-10-08 05:22:43');
+INSERT INTO "gemstones" VALUES (32,'Lepidolit','* Pannchakrat Yin *\r\nLugnande. Tar bort stresskänslor, ilska och negativa känslor. Befrämjrar komiskt medvetande, meditation och bön.',NULL,'2010-10-04 09:05:21','2010-10-04 09:05:21');
+INSERT INTO "gemstones" VALUES (33,'Serpentin','* Hjärtchakrat - Yang *\r\nSymboliserar fred och ro. Sätter oss i förbindelse med obearbetade känslor och hjälper oss at acceptera och frigöra dem. Rensar svartsjukan ut från hjärtat. Feminin energi.',NULL,'2010-10-05 15:23:42','2010-10-05 15:23:42');
+INSERT INTO "gemstones" VALUES (34,'Svart Turmalin','* Rotchakrat - Yin *\r\n\r\nDen grundar andliga energier. Den tar bort och skyddar från negativa vibrationer och känslor. Ger mod att stå på egna ben.',NULL,'2010-10-05 15:27:04','2010-10-05 15:34:14');
+INSERT INTO "gemstones" VALUES (35,'Grön Turmalin','Hjälper att omvandla dina känslor från solar plexus till hjärtenergi. Lättare att bearbeta sorg och negativa självupppfyllande profetior.',NULL,'2010-10-05 15:30:11','2010-10-08 08:26:18');
+INSERT INTO "gemstones" VALUES (36,'Rosenkvarts','* Hjärtchakrat - Yin *\r\n\r\nRosenvartsen öppnar ditt hjärta och ger dig tröst och kärlek. Den kan i alla sammanhang hjälpa dig att få kontakt med det sårbara och öppna inom dig - ditt \"inre barn\". Rosenkvartsen kan ge dig kärlek till det inom dig som aldrig blivit sett, den hjälper dig att känna tilliten och oskuldfullheten som finns inom dig. Det gör dig mottaglig för emotionell läkning. Och du kan komma i kontakt med nya nivåer av liv inom dig. Bra mot påverkan från skadlig strålning.',NULL,'2010-10-05 15:32:08','2010-10-05 15:32:08');
+INSERT INTO "gemstones" VALUES (37,'Röd Turmalin (Rubbelit)','* Rotchakrat - Yang *\r\n\r\nFör in energi till kroppen. Skyddande. Ger kraft och förstärker viljan.\r\n',NULL,'2010-10-05 15:32:55','2010-10-08 09:36:21');
+INSERT INTO "gemstones" VALUES (38,'Vit Kvartsit','',NULL,'2010-10-05 15:49:54','2010-10-05 15:49:54');
+INSERT INTO "gemstones" VALUES (39,'Röd Kvartsit','...',NULL,'2010-10-05 15:51:03','2010-10-05 15:51:03');
+INSERT INTO "gemstones" VALUES (40,'Zinkit','..',NULL,'2010-10-05 15:51:33','2010-10-05 15:51:33');
+
+--
+-- Table structure for table "gemstones_links"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "gemstones_links" (
+  "id" int(11) NOT NULL,
+  "link_id" int(10) NOT NULL,
+  "gemstone_id" int(10) NOT NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "gemstones_links"
+--
+
+INSERT INTO "gemstones_links" VALUES (1,1,23);
+INSERT INTO "gemstones_links" VALUES (2,2,16);
+INSERT INTO "gemstones_links" VALUES (3,3,26);
+
+--
+-- Table structure for table "gemstones_properties"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "gemstones_properties" (
+  "gemstone_id" int(10) default NULL,
+  "property_id" int(10) default NULL
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "gemstones_properties"
+--
+
+
+--
+-- Table structure for table "links"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "links" (
+  "id" int(11) NOT NULL,
+  "title" varchar(255) NOT NULL,
+  "url" varchar(255) NOT NULL,
+  "desc" text,
+  "linktype_id" int(10) default NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "links"
+--
+
+INSERT INTO "links" VALUES (1,'Azurite','http://www.youtube.com/watch?v=eVfGdIjGtvs','',1);
+INSERT INTO "links" VALUES (2,'Amazonite','http://www.youtube.com/watch?v=WkI49vcVrXY',NULL,1);
+INSERT INTO "links" VALUES (3,'jet','http://www.youtube.com/watch?v=vz79uuVHNuk',NULL,1);
+
+--
+-- Table structure for table "linktypes"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "linktypes" (
+  "id" int(11) NOT NULL,
+  "name" varchar(255) NOT NULL,
+  "iconurl" varchar(255) default NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "linktypes"
+--
+
+INSERT INTO "linktypes" VALUES (1,'youtube','/images/youtube.gif');
+
+--
+-- Table structure for table "properties"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "properties" (
+  "id" int(11) NOT NULL,
+  "name" varchar(255) default NULL,
+  "parent_id" int(10) default NULL,
+  "created_at" datetime default NULL,
+  "updated_at" datetime default NULL,
+  PRIMARY KEY  ("id")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "properties"
+--
+
+INSERT INTO "properties" VALUES (1,'släpper gamla ångstebegrepp från barndom eller tidigare liv.',NULL,'2010-09-19 10:21:19','2010-09-19 10:21:19');
+INSERT INTO "properties" VALUES (2,'håret',NULL,'2010-09-19 11:41:08','2010-09-19 11:42:02');
+INSERT INTO "properties" VALUES (5,'Bra för o veta',NULL,'2010-10-08 05:10:00','2010-10-08 05:10:00');
+
+--
+-- Table structure for table "schema_migrations"
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE "schema_migrations" (
+  "version" varchar(255) NOT NULL,
+  UNIQUE KEY "unique_schema_migrations" ("version")
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table "schema_migrations"
+--
+
+INSERT INTO "schema_migrations" VALUES ('20100912153837');
+INSERT INTO "schema_migrations" VALUES ('20100916095422');
+INSERT INTO "schema_migrations" VALUES ('20100916100157');
+INSERT INTO "schema_migrations" VALUES ('20100916102054');
+INSERT INTO "schema_migrations" VALUES ('20100916115422');
+INSERT INTO "schema_migrations" VALUES ('20100919094950');
+INSERT INTO "schema_migrations" VALUES ('20100919101700');
+INSERT INTO "schema_migrations" VALUES ('20101008042654');
+INSERT INTO "schema_migrations" VALUES ('20101008043859');
+INSERT INTO "schema_migrations" VALUES ('20101008064758');
+INSERT INTO "schema_migrations" VALUES ('20101008070631');
+INSERT INTO "schema_migrations" VALUES ('20101008074232');
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2010-10-14  1:18:12

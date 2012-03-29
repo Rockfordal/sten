@@ -1,0 +1,10 @@
+<% if can? :create, Gemstone %>
+<h2>Ny Sten</h2>
+
+<%= render 'form' %>
+
+<%= link_to 'Tillbaka', gemstones_path %>
+
+<%# @gemstone.add_comment comment %>
+
+<% end %>

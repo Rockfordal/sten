@@ -1,0 +1,16 @@
+<h2>Bilder</h2>
+
+<table>
+  <tr>
+    <th>Namn</th>
+    <th>Miniatyr</th>
+  </tr>
+  <% for image in @images %>
+    <tr>
+      <td><%= image.name %></td>
+      <td><%= link_to image_tag(image.photo.url(:small), :border=>'0'), image %></td>
+    </tr>
+<% end %>
+</table>
+
+<p><%= button_to "Ny bild", new_image_path %></p>
