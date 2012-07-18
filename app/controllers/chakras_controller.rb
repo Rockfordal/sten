@@ -1,7 +1,8 @@
 class ChakrasController < ApplicationController
 load_and_authorize_resource
-  def index
-    @chakras = Chakra.order("id DESC")
+
+def index
+    @chakras = Chakra.order('id DESC')
   end
   
   def show
@@ -15,7 +16,7 @@ load_and_authorize_resource
   def create
     @chakra = Chakra.new(params[:chakra])
     if @chakra.save
-      flash[:notice] = "Successfully created chakra."
+      flash[:notice] = 'Successfully created chakra.'
       redirect_to @chakra
     else
       render :action => 'new'
@@ -29,7 +30,7 @@ load_and_authorize_resource
   def update
     @chakra = Chakra.find(params[:id])
     if @chakra.update_attributes(params[:chakra])
-      flash[:notice] = "Successfully updated chakra."
+      flash[:notice] = 'Successfully updated chakra.'
       redirect_to @chakra
     else
       render :action => 'edit'

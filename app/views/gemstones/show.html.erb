@@ -65,7 +65,6 @@
   <%#= @gemstone.users.find_by_id(@gemstone.creator_id) %>
 </p>
 
-
-<%= link_to 'Ändra', edit_gemstone_path(@gemstone)  if can? :update, Gemstone %>
-<%= link_to 'Radera', @gemstone, :confirm => 'Är du säker?', :method => :delete if can?  :destroy, Gemstone %>
+<%= link_to 'Ändra', edit_gemstone_path(@gemstone) if can? :update, Gemstone %>
+<%= link_to 'Radera', gemstone_path(@gemstone), confirm: 'Är du säker?', method: :delete if can? :destroy, Gemstone %>
 <%= link_to 'Tillbaka', gemstones_path %>
