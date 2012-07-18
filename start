@@ -1,0 +1,8 @@
+#!/bin/bash
+source ~/.bash_profile
+shopt -s expand_aliases
+cd /mnt/export/tank/home/nb/sten31
+#rails s -p 3003
+puma -p 3003
+#thin start -e staging -p 3003
+sleep 2

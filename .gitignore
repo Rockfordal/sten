@@ -1,7 +1,8 @@
-.bundle
+/.bundle
+/.rvmrc
 db/*.sqlite*
 db/*.sql
-log/*.log
+log/*
 tmp/**/*
 config/database.yml
 public/assets/**
