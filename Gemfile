@@ -10,7 +10,6 @@ group :assets do
   gem 'coffee-script'
 end
 
-  gem 'thin'
   gem 'puma'
   gem 'jquery-rails'
   gem 'inherited_resources'
@@ -36,4 +35,32 @@ end
 
 group :development do
   gem 'nifty-generators'
+end
+
+#group :test do
+# gem 'spork'
+# gem 'guard'
+# gem 'rspec'
+#end
+
+group :test do
+   gem 'capybara'
+   gem 'rspec-rails' #rspec
+   gem 'rspec'
+   gem 'guard-spork' #spork
+   gem 'guard-rspec' #guard #rb-fchange rb-inotify
+   gem 'rb-fsevent'
+   gem 'guard-cucumber'
+   gem 'guard'
+   gem 'spork' #, '~> 1.0.0rc3'
+   gem 'shoulda' #gem 'shoulda-matchers' #gem 'shoulda-context'
+   gem 'database_cleaner'
+   gem 'forgery'
+   gem 'fabrication'
+   gem 'fuubar'
+   gem 'syntax'
+   gem 'growl'
+   gem 'cucumber-rails', require: false #, group: :test
+   gem 'launchy'
+   gem 'email_spec'
 end
