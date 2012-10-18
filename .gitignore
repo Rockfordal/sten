@@ -4,5 +4,4 @@ db/*.sqlite*
 db/*.sql
 log/*
 tmp/**/*
-config/database.yml
 public/assets/**
