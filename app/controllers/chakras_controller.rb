@@ -19,7 +19,7 @@ def index
       flash[:notice] = 'Successfully created chakra.'
       redirect_to @chakra
     else
-      render :action => 'new'
+      render action: 'new'
     end
   end
   
@@ -33,7 +33,7 @@ def index
       flash[:notice] = 'Successfully updated chakra.'
       redirect_to @chakra
     else
-      render :action => 'edit'
+      render action: 'edit'
     end
   end
   

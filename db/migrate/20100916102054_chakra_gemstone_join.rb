@@ -1,6 +1,6 @@
 class ChakraGemstoneJoin < ActiveRecord::Migration
   def self.up
-    create_table :chakras_gemstones, :id => false do |t|
+    create_table :chakras_gemstones, id: false do |t|
       t.integer :chakra_id
       t.integer :gemstone_id
     end

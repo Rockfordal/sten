@@ -5,9 +5,9 @@ respond_to :html
   #  def create
   #    @image = Image.create(params[:image])
   #    if @image.save
-  #      redirect_to @image, :notice => "Bilden är skapad."
+  #      redirect_to @image, notice: "Bilden är skapad."
   #    else
-  #      render :action => 'new'
+  #      render action: 'new'
   #    end
   #  end
 

@@ -7,7 +7,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @properties }
+      format.xml  { render xml: @properties }
     end
   end
 
@@ -18,7 +18,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @property }
+      format.xml  { render xml: @property }
     end
   end
 
@@ -29,7 +29,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @property }
+      format.xml  { render xml: @property }
     end
   end
 
@@ -45,11 +45,11 @@ load_and_authorize_resource
 
     respond_to do |format|
       if @property.save
-        format.html { redirect_to(@property, :notice => 'Property was successfully created.') }
-        format.xml  { render :xml => @property, :status => :created, :location => @property }
+        format.html { redirect_to(@property, notice: 'Property was successfully created.') }
+        format.xml  { render xml: @property, status: :created, location: @property }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @property.errors, :status => :unprocessable_entity }
+        format.html { render action: "new" }
+        format.xml  { render xml: @property.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -61,11 +61,11 @@ load_and_authorize_resource
 
     respond_to do |format|
       if @property.update_attributes(params[:property])
-        format.html { redirect_to(@property, :notice => 'Property was successfully updated.') }
+        format.html { redirect_to(@property, notice: 'Property was successfully updated.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @property.errors, :status => :unprocessable_entity }
+        format.html { render action: "edit" }
+        format.xml  { render xml: @property.errors, status: :unprocessable_entity }
       end
     end
   end

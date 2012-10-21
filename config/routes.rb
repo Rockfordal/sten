@@ -10,7 +10,7 @@ Sten3::Application.routes.draw do
   resources :users
   resources :roles
   resources :images
-  root :to => "gemstones#index"
-#, :name =>"Home"
+  root to: "gemstones#index"
+#, name:"Home"
   match '/:controller(/:action(/:id))'
 end

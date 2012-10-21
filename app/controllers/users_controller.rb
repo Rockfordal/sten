@@ -32,9 +32,9 @@ respond_to :html
   #     @user = User.find(params[:id])
   #   end
   #   if @user.update_attributes(params[:user])
-  #     redirect_to root_url :notice => "Användaren har uppderats."
+  #     redirect_to root_url notice: "Användaren har uppderats."
   #   else
-  #     render :action => "ändra"
+  #     render action: "ändra"
   #   end
   # end
 
