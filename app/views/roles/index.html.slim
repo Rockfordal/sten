@@ -1,0 +1,16 @@
+h2 Roller
+
+table
+  tr
+    th Namn
+    th Beskrivning
+
+  - for role in @roles
+    tr
+      td= role.name
+      td= role.beskrivning
+      td.nobg= link_to "Visa", role
+      td.nobg= link_to "Ändra", edit_role_path(role)
+      td.nobg= link_to "Radera", role, confirm: 'Är du säker?', method: :delete
+p
+  = link_to 'Ny Roll', new_role_path

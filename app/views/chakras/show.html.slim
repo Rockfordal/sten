@@ -1,0 +1,23 @@
+- title 'Chakra'
+p
+  strong Namn:
+  = @chakra.name
+p
+  strong Nr:
+  = @chakra.nr
+p
+  strong Beskrivning:
+  = @chakra.desc
+p
+  strong Kropp:
+  = @chakra.kropp
+p
+  strong Placering:
+  = @chakra.placering
+p
+  strong Element:
+  = @chakra.element
+p
+  = link_to 'Ändra', edit_chakra_path(@chakra) if can? :update, Chakra
+  = link_to 'Radera', @chakra, confirm: 'Är du säker?', method: :delete if can? :destroy, Chakra
+  = link_to 'Visa alla', chakras_path

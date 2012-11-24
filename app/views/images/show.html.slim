@@ -1,0 +1,14 @@
+h2 Bilder
+
+p
+  strong Name:
+  = @image.name
+p
+  strong Beskrivning:
+  = @image.beskrivning
+br
+= image_tag @image.photo.url
+p
+=' link_to 'Ändra', edit_image_path(@image)
+=' link_to 'Radera', @image, :confirm => 'Är du säker?', :method => :delete
+= link_to 'Visa alla', images_path

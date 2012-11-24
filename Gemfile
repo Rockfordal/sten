@@ -1,27 +1,38 @@
-source 'http://rubygems.org'
-  gem 'rails'
+source 'http://bundler-api.herokuapp.com'
+#source 'http://rubygems.org'
+  gem 'rails' #, github: 'rails/rails'
+  #gem 'journey',   github: 'rails/journey'
+  #gem 'arel',      github: 'rails/arel'
+  #gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
   gem 'mysql2'
   gem 'therubyracer'
-
-group :assets do
-  gem 'sass-rails' #, "  ~> 3.2.3"
-  gem 'coffee-rails' #, "~> 3.2.1"
-  gem 'uglifier' #, '>=1.0.3'
-  gem 'coffee-script'
-end
-
-  gem 'puma'
   gem 'jquery-rails'
-  gem 'inherited_resources'
+
+  group :assets do
+    gem 'sass-rails' #, "  ~> 3.2.3"
+    gem 'coffee-rails' #, "~> 3.2.1"
+    gem 'uglifier' #, '>=1.0.3'
+    gem 'coffee-script'
+  end
+
+  gem 'psych'
+  gem 'je'
   gem 'devise'
   gem 'cancan'
   gem 'simple_form'
   gem 'kaminari'
   gem 'simple-navigation'
   gem 'paperclip'
-  gem 'cockatoo' #chat-server
-  gem 'haml'
+  gem 'slim'
+  gem 'inherited_resources'
+  gem 'turbolinks'
   gem 'acts_as_commentable'
+  #gem 'strong_parameters' #, github: 'rails/strong_parameters'
+  gem 'rip_hashrocket' #syntax_fix
+  gem 'annotate'
+  gem 'puma'
+
+  #gem 'cockatoo' #chat-server
   #gem 'copycopter_client', '2.0.0'
   #gem 'dalli'
   #gem 'memcache-client'
@@ -35,6 +46,9 @@ end
 
 group :development do
   gem 'nifty-generators'
+  #gem 'haml'
+  #gem 'haml-rails'
+  #gem 'erb2haml'
 end
 
 #group :test do

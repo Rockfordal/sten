@@ -1,0 +1,16 @@
+= simple_form_for(@gemstone) do |f|
+  = f.input :name, label: 'Namn'
+  = f.input :desc, label: 'Beskrivning'
+  = f.association :color, label: 'Färg'
+  = f.association :chakras, label: 'Chakra'
+  = f.association :energies, label: 'Energier'
+  = f.association :links, label: 'Länkar'
+  = f.association :users, label_method: :email, label: 'Ägs av' if can? :manage, Gemstone
+
+  / @gemstone.users.find_by_id(current_user)
+  /= f.fields_for :properties do |builder| 
+  / render 'property_fields', f: builder
+
+  p
+    /= link_to_add_fields "Ny egenskap", f, :properties
+    = f.button :submit

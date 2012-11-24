@@ -1,0 +1,12 @@
+table
+  tr
+    th Namn
+    th Ikon
+    th
+    th
+  - @linktypes.each do |linktype|
+    tr
+      td= link_to linktype.name, linktype
+      td= linktype.iconurl
+p
+  = link_to 'Ny länktyp', new_linktype_path if can? :create, Linktype

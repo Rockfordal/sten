@@ -1,6 +1,6 @@
 class ImagesController < InheritedResources::Base
-load_and_authorize_resource
-respond_to :html
+  load_and_authorize_resource
+  respond_to :html
 
   #  def create
   #    @image = Image.create(params[:image])

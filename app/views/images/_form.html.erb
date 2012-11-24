@@ -1,7 +1,0 @@
-<%= simple_form_for @image, :html => {:multipart => true} do |f| %>
-  <%= f.error_messages %>
-  <%= f.input :name, :label => 'Namn' %>
-  <%= f.input :beskrivning, :input_html => { :size => "58"}  %>
-  <%= f.input :photo, :as => :file, :label => 'Bild' %>
-  <%= f.button :submit %>
-<% end %>

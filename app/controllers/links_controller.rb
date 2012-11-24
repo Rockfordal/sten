@@ -1,10 +1,8 @@
 class LinksController < InheritedResources::Base
-#load_and_authorize_resource
-layout "chat"
+  load_and_authorize_resource
 
-def index
- render 'chatta'
-end
-
+  def index
+    render 'index'
+  end
 
 end

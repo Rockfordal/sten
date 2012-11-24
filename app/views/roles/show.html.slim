@@ -1,0 +1,12 @@
+h2 Roll
+
+p
+  strong Namn:
+  = @role.name
+p
+  strong Beskrivning:
+  = @role.beskrivning
+
+=' link_to "Ändra", edit_role_path(@role)
+=' link_to "Radera", @role, confirm: 'Är du säker?', method: :delete
+= link_to "Visa alla", roles_path

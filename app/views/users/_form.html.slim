@@ -1,0 +1,5 @@
+= simple_form_for(@user) do |f|
+  = f.error_messages
+  = f.input :email, label: 'epost'
+  = f.input :password
+  = f.submit 'Spara'

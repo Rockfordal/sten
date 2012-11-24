@@ -1,0 +1,15 @@
+- cache('en') do
+  br/
+  table
+    tr
+      th Namn
+      th Beskrivning
+    - for energy in @energies
+      tr
+        td= link_to energy.name, energy
+        td align="center"
+          - if energy.desc.presence
+            ja
+          - else
+            nej
+  p= link_to 'Ny Energi', new_energy_path if can? :create, Energy

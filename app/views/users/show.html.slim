@@ -1,0 +1,13 @@
+p
+  b Epost:
+  = h @user.email
+p
+  b Roller:
+  - @user.roles.each do |roll|
+    = roll.name
+
+table
+  tr
+    td.nobg= link_to "Ändra", edit_user_path(@user)
+    td.nobg= link_to "Radera", @user, confirm: 'Är du säker?', method: :delete
+    td.nobg= link_to "Visa alla", users_path

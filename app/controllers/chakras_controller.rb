@@ -1,12 +1,12 @@
 class ChakrasController < ApplicationController
-load_and_authorize_resource
+  load_and_authorize_resource
 
-def index
+  def index
     @chakras = Chakra.order('id DESC')
   end
   
   def show
-    @chakra = Chakra.find(params[:id])
+    @chakra = Chakra.find params[:id]
   end
   
   def new
@@ -14,33 +14,33 @@ def index
   end
   
   def create
-    @chakra = Chakra.new(params[:chakra])
+    @chakra = Chakra.new params[:chakra]
     if @chakra.save
-      flash[:notice] = 'Successfully created chakra.'
+      flash[:notice] = 'Chakra skapad.'
       redirect_to @chakra
     else
-      render action: 'new'
+      render 'new'
     end
   end
   
   def edit
-    @chakra = Chakra.find(params[:id])
+    @chakra = Chakra.find params[:id]
   end
   
   def update
-    @chakra = Chakra.find(params[:id])
+    @chakra = Chakra.find params[:id]
     if @chakra.update_attributes(params[:chakra])
-      flash[:notice] = 'Successfully updated chakra.'
+      flash[:notice] = 'Chakra uppdaterad.'
       redirect_to @chakra
     else
-      render action: 'edit'
+      render 'edit'
     end
   end
   
   def destroy
-    @chakra = Chakra.find(params[:id])
+    @chakra = Chakra.find params[:id]
     @chakra.destroy
-    flash[:notice] = "Successfully destroyed chakra."
+    flash[:notice] = "Crakra raderad."
     redirect_to chakras_url
   end
 end

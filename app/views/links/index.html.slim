@@ -1,0 +1,10 @@
+table
+  tr
+    th Titel
+    th Länktyp
+  - @links.each do |link|
+    tr
+      td= link_to link.title, link
+      td= link.linktype.name if link.linktype.present?
+p
+  = link_to 'Ny länk', new_link_path, method: :get if can? :create, Link

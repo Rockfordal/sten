@@ -1,0 +1,20 @@
+h2 Registrera
+
+br
+b Vänligen ange ditt fullständigt namn, din e-postaddress och ett lösenord
+br
+br
+
+.forrm style="width: 500px"
+  .form-horizontal= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      = f.input :name, hint: 'Ditt fullständiga namn'
+      = f.input :email
+      = f.input :password
+      = f.input :password_confirmation
+      = f.input :username, hint: 'Valfritt namn som du sedan kan logga in med'
+
+      .form-actions
+        = f.submit 'Registrera', class: 'btn btn-success'
+        p
+        = render 'devise/shared/links'

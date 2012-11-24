@@ -1,0 +1,17 @@
+p#notice= notice
+
+p
+  strong Titel:
+  = @link.title
+p
+  strong Url:
+  = @link.url
+p
+  strong Beskrivning:
+  = @link.desc
+p
+  strong Länktyper:
+p
+
+  =' link_to 'Ändra', edit_link_path(@link)
+  = link_to 'Tillbaka', links_path

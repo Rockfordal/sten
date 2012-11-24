@@ -1,0 +1,11 @@
+p#notice= notice
+
+p
+  b Name:
+  = @property.name
+p
+  b Parent:
+  = @property.parent_id
+
+= link_to 'Ändra', edit_property_path(@property)
+= link_to 'Tillbaka', properties_path

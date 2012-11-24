@@ -1,0 +1,25 @@
+h2
+  | Min profil &nbsp;
+  /= link_to image_tag(avatar_url(User.find(current_user))), 'http://www.gravatar.com', title: current_user.email, id: 'gravatar', target: 'blank' if user_signed_in?
+br
+
+.forrm style="width: 500px"
+  .form-horizontal= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'well'  }) do |f|
+    = devise_error_messages!
+    = f.error_messages
+    = f.input :email
+    /= f.input :username
+    = f.input :password, hint: 'lämna blankt om du inte vill ändra det'
+    = f.input :password_confirmation, hint: 'upprepa ditt lösenord'
+    = f.input :current_password, hint: 'vi behöver ditt nuvarande lösenord av säkerhetsskäl'
+
+    .form-actions
+      =' link_to 'Hem', '/', class: 'btn'
+      =' f.submit 'Spara', class: 'btn btn-success'
+      = link_to 'Avsluta mitt konto', registration_path(resource_name), confirm: 'Är du säker?', method: :delete, class: 'btn btn-danger'
+      = link_to 'Logga ut', '/logout'
+
+    div
+      h4
+        'Dina nuvarande roller:
+      = current_user.roles.map {|roll| roll.name }.join(', ')

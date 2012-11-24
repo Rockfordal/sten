@@ -1,0 +1,44 @@
+p#notice= notice
+
+p
+  strong Namn:
+  = @gemstone.name
+p
+  strong Beskrivning:
+  br
+  = @gemstone.desc
+p
+  strong Chakran
+  - for chakra in @gemstone.chakras
+    li
+      = chakra.name
+p
+  strong Energier
+  - for energy in @gemstone.energies
+    li= energy.name
+p
+  strong Länkar
+  - @gemstone.links.each do |link|
+    li
+      = link_to image_tag(link.linktype.iconurl), link.url
+      = link_to link.url, link.url
+p
+  strong Bilder
+  - if @gemstone.id == 26
+    = link_to image_tag("http://www.kristallhuset.se/images/Stenar_kristaller/Jet_liten.jpg"), "http://www.kristallhuset.se/images/Stenar_kristaller/Jet_stor.jpg"
+p
+  strong Egenskaper
+  - for property in @gemstone.properties
+    li= property.name
+p
+  strong Ägande
+p
+  strong Inmatad
+  = @gemstone.created_at
+p
+  strong Uppdaterad
+  = @gemstone.updated_at
+
+= link_to 'Ändra', edit_gemstone_path(@gemstone) if can? :update, Gemstone
+= link_to 'Radera', @gemstone, confirm: 'Är du säker?', method: :delete if can? :destroy, Gemstone
+= link_to 'Tillbaka', gemstones_path

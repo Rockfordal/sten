@@ -14,9 +14,9 @@
 #
 
 class Chakra < ActiveRecord::Base
-has_and_belongs_to_many :gemstones
-#attr_accessible :name, :nr, :desc
+  #attr_accessible :name, :nr, :desc
+  has_and_belongs_to_many :gemstones
 
-validates :name, presence: true, uniqueness: true
-validates :nr, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
+  validates :nr,   presence: true, uniqueness: true
 end

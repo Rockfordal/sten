@@ -1,0 +1,7 @@
+= simple_form_for(@link) do |f|
+  = f.error_messages
+  = f.input :title, :label => 'Titel'
+  = f.input :url
+  = f.association :linktype, :label => 'Länktyp'
+  p
+    = f.submit 'spara'

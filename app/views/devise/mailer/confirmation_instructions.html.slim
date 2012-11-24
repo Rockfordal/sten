@@ -1,0 +1,4 @@
+p
+  | Välkommen #{@resource.name}!
+p Du kan bekräfta ditt konto genom att klicka på länken nedan:
+p= link_to 'Bekräfta konto', confirmation_url(@resource, confirmation_token: @resource.confirmation_token)

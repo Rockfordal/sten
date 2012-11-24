@@ -1,0 +1,11 @@
+p#notice= notice
+
+p
+  b Namn:
+  = @linktype.name
+p
+  b Ikonbild:
+  = @linktype.iconurl
+
+= link_to 'Ändra', edit_linktype_path(@linktype)
+= link_to 'Tillbaka', linktypes_path

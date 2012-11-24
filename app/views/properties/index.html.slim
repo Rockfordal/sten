@@ -1,0 +1,17 @@
+h2 Egenskaper
+
+table
+  tr
+    th Namn
+    th Förälder
+    th
+  - @properties.each do |property|
+    tr
+      td= property.name
+      td= property.parent_id
+      td
+        =' link_to 'Visa', property
+        =' link_to 'Ändra', edit_property_path(property)
+        = link_to 'Radera', property, confirm: 'Är du säker?', method: :delete
+br
+= link_to 'Ny Egenskap', new_property_path if can? :create, Property

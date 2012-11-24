@@ -1,8 +1,8 @@
 class ColorsController < InheritedResources::Base
-load_and_authorize_resource
+  load_and_authorize_resource
 
   def index
-    @colors = Color.order("name")
+    @colors = Color.order('name')
   end
 
   def create

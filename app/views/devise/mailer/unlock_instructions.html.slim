@@ -1,0 +1,5 @@
+p
+  | Hej #{@resource.email}!
+p Ditt konto har låsts på grund av för många ogiltiga inloggningsförsök.
+p Klicka på länken nedan för att låsa upp ditt konto:
+p= link_to 'Lås upp konto', unlock_path(@resource, unlock_token: @resource.unlock_token)

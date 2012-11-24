@@ -1,0 +1,12 @@
+table
+  tr
+    th Namn
+    th Beskrivning
+
+  - for color in @colors
+    tr
+      td= link_to color.name, color
+      td alig="center"
+        - color.desc.present? ? 'ja' : 'nej'
+
+p= link_to 'Ny Färg', new_color_path(@color) if can? :create, Color

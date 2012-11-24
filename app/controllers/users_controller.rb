@@ -1,10 +1,10 @@
 class UsersController < InheritedResources::Base
-load_and_authorize_resource
-respond_to :html
+  load_and_authorize_resource
+  respond_to :html
 
-# before_filter :authenticate_user! #mongoid
-# before_filter :set_pagetitle
-# in_place_edit_for :user, :username #email
+  # before_filter :authenticate_user! #mongoid
+  # before_filter :set_pagetitle
+  # in_place_edit_for :user, :username #email
 
   def create
     @user = User.new(params[:user])

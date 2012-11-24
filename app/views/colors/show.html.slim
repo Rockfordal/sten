@@ -1,0 +1,11 @@
+- title 'Färg'
+%p
+  %strong Namn:
+  = @color.name
+%p
+  %strong Beskrivning:
+  = @color.desc
+%p
+  = link_to 'Ändra', edit_color_path(@color) if can? :update, Color
+  = link_to 'Radera', @color, data: { confirm: 'Är du säker?' }, method: :delete if can? :destroy, Color
+  = link_to 'Visa alla', colors_path

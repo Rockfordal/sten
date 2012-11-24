@@ -1,7 +1,8 @@
 #!/bin/bash
 source ~/.bash_profile
 shopt -s expand_aliases
-#rails s -p 3003
-puma -p 3003
-#thin start -e staging -p 3003
+PORT=3004
+#rails s -p $PORT
+#thin start -e staging -p $PORT
+bundle exec je puma -p $PORT
 sleep 2

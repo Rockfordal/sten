@@ -1,8 +1,0 @@
-<h2>Ny Roll</h2>
-
-<% semantic_form_for(@role) do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => 'form', :locals => {:f => f} %>
-<%- end -%>
-
-<p><%= button_to "Tillbaka", roles_path %></p>
