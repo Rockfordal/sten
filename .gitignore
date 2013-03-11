@@ -1,6 +1,5 @@
 config/database.yml
 /.bundle
-/.rvmrc
 db/*.sqlite*
 db/*.sql
 log/*
