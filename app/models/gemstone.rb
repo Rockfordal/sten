@@ -15,21 +15,17 @@
 
 class Gemstone < ActiveRecord::Base
   belongs_to :color
-  # belongs_to :creator, class_name: :User, foreign_key: :creator_id
   has_many :ownage
   has_many :users, through: :ownage
   has_and_belongs_to_many :chakras
   has_and_belongs_to_many :properties
   has_and_belongs_to_many :energies
-  has_and_belongs_to_many :links # , dependent: :destroy
-  # acts_as_commentable
-  # accepts_nested_attributes_for :properties, allow_destroy: true, reject_if: lambda { |a| a[:name].blank? }
+  has_and_belongs_to_many :links
   paginates_per 50
 
   validates :name, presence: true
 
   default_scope order('gemstones.name')
-
 
   def self.search(search)
     if search
