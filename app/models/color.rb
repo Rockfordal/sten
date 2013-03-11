@@ -10,9 +10,7 @@
 #
 
 class Color < ActiveRecord::Base
-  #attr_accessible :name, :desc
   has_many :gemstones
-  # acts_as_cached
 
   validates :name, presence: true, uniqueness: true
 
