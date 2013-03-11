@@ -1,12 +1,11 @@
 Sten3::Application.routes.draw do
 
-#devise_for :users
-devise_for :users #, controllers: { sessions: 'sessions' }
-devise_scope :user do #as :user
+devise_for :users
+devise_scope :user do
   get 'login', to: 'devise/sessions#new'
   get 'logout', to: 'devise/sessions#destroy'
   get 'registrera', to: 'devise/registrations#new'
-  match 'sessions/user', to: 'devise/sessions#create'
+  match 'sessions/user', to: 'devise/sessions#create', via: :get
 end
 
   resources :gemstones
@@ -19,7 +18,6 @@ end
   resources :linktypes
   resources :links
   resources :roles
-  root to: "gemstones#index"
-  #, name:"Home"
-  match '/:controller(/:action(/:id))'
+  root to: 'gemstones#index'
+  match '/:controller(/:action(/:id))', via: :get
 end
