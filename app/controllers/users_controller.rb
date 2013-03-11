@@ -16,23 +16,23 @@ class UsersController < InheritedResources::Base
    end
 
   # def set_pagetitle
-  #   @pagetitle = "Administration för användare"
+  #   @pagetitle = 'Administration för användare'
   # end
 
   # def edit
-  # @pagetitle = "ändrar Profil"
+  # @pagetitle = 'ändrar Profil'
   # @user = User.find params[:id]
   ## @user = current_user
   # end
 
   # def update
-  #   if params[:id] == "nuvarande"
+  #   if params[:id] == 'nuvarande'
   #     @user = current_user
   #   else
   #     @user = User.find(params[:id])
   #   end
   #   if @user.update_attributes(params[:user])
-  #     redirect_to root_url notice: "Användaren har uppderats."
+  #     redirect_to root_url notice: 'Användaren har uppderats.'
   #   else
   #     render action: "ändra"
   #   end
@@ -45,5 +45,4 @@ class UsersController < InheritedResources::Base
   # def update
   #   update! { users_url }
   # end
-
 end
