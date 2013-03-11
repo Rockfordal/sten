@@ -8,18 +8,8 @@
     <%= yield(:head) %>
   </head>
   <body>
-
-<div id="example_2" class="example_content">
-  <div id="top_navigation"><%= render_navigation(expand_all: true) %></div>
- <div class="content">
-  <div class="breadcrumbs">
-   <%#= render_navigation(renderer: :breadcrumbs, join_with: ' &raquo; ') %>
-  </div>
       <div class="notice"><%= flash[:notice] %></div>
       <%= content_tag :h1, yield(:title) %>
-<%# if show_title? %>
       <%= yield %>
- </div>
-</div>
   </body>
 </html>
