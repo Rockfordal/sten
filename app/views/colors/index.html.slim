@@ -6,7 +6,6 @@ table
   - @colors.each do |color|
     tr
       td= link_to color.name, color
-      td alig="center"
-        - color.desc.present? ? 'ja' : 'nej'
+      td= color.desc.present? ? 'ja' : 'nej'
 
 p= link_to_new Color if can? :create, Color
