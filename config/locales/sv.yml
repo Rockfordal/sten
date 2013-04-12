@@ -1,11 +1,41 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
-en:
-  hello: "Hello world"
-
+sv:
   views:
     pagination:
       previous: "&lt; F&ouml;reg&aring;ende"
-      next: "N&auml;sta &gt;" 
+      next: "N&auml;sta &gt;"
 
+  activerecord:
+    errors:
+      # model.errors.full_messages format.
+      template:
+        header:
+          one: "Ett fel förhindrade denna %{model} från att sparas"
+          other: "%{count} fel förhindrade denna %{model} från att sparas"
+        body: 'Det var problem med följande fält:'
+
+      messages:
+        taken: 'är upptaget'
+        record_invalid: "Validering misslyckades: %{errors}"
+        #<<: *errors_messages
+
+      full_messages:
+        format: "%{attribute} %{message}"
+
+    # Translate model names. Used in Model.human_name().
+    models:
+      color: 'Färg'
+      energy: 'Energi'
+      image: 'Bild'
+      user: 'Användare'
+      role: 'Roll'
+      link: 'Länk'
+      linktype: 'Länktyp'
+
+    # Translate model attribute names. Used in Model.human_attribute_name(attribute).
+    # TODO: koppla vanliga fält mot global översättning
+
+    attributes:
+      mpay:
+        userprofile_id: 'Deltagare'
+        month: 'Månad'
+        payday: 'Utbetalningsdag'
