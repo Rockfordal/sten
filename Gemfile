@@ -18,6 +18,7 @@ source 'http://bundler-api.herokuapp.com'
     gem 'uglifier' #, '>=1.0.3'
   end
 
+  gem 'mysql2psql'
   gem 'psych'
   #gem 'devise' #, github: 'plataformatec/devise'
   gem 'devise', github: 'idl3/devise', branch: 'rails4'
