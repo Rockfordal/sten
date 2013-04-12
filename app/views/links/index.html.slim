@@ -6,5 +6,4 @@ table
     tr
       td= link_to link.title, link
       td= link.linktype.name if link.linktype.present?
-p
-  = link_to 'Ny länk', new_link_path, method: :get if can? :create, Link
+p= link_to_new Link if can? :create, Link

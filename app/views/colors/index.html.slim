@@ -3,10 +3,10 @@ table
     th Namn
     th Beskrivning
 
-  - for color in @colors
+  - @colors.each do |color|
     tr
       td= link_to color.name, color
       td alig="center"
         - color.desc.present? ? 'ja' : 'nej'
 
-p= link_to 'Ny Färg', new_color_path(@color) if can? :create, Color
+p= link_to_new Color if can? :create, Color

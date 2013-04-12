@@ -1,11 +1,10 @@
 table
   tr
     th E-post
-  - for user in @users
+  - @users.each do |user|
     tr
       td= user.email
-      td.nobg= button_to 'Visa', user, :method => :get
-      td.nobg= button_to 'Ändra', edit_user_path(user), :method => :get
-      td.nobg= button_to 'Radera', user, :confirm => 'Är du säker?', :method => :delete
-p
-  = button_to 'Ny användare', :controller => 'users', :action => 'new'
+      td= link_to 'Visa', user, class: 'btn'
+      td= link_to_edit user
+      td= link_to_destroy user
+p= link_to_new User if can? :create, User

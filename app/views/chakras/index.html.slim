@@ -9,7 +9,4 @@
       tr
         td= link_to chakra.name, chakra
         td= chakra.nr
-  td rowspan="7"
-    br
-    br
-    = link_to 'Nytt Chakra', new_chakra_path if can? :create, Chakra
+  p= link_to_new Chakra if can? :create, Chakra

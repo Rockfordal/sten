@@ -18,6 +18,6 @@ p
   strong Element:
   = @chakra.element
 p
-  = link_to 'Ändra', edit_chakra_path(@chakra) if can? :update, Chakra
-  = link_to 'Radera', @chakra, confirm: 'Är du säker?', method: :delete if can? :destroy, Chakra
-  = link_to 'Visa alla', chakras_path
+  =' link_to_index Chakra
+  =' link_to_edit @chakra if can? :update, Chakra
+  =' link_to_destroy @chakra if can? :destroy, Chakra

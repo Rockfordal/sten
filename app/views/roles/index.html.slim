@@ -5,12 +5,11 @@ table
     th Namn
     th Beskrivning
 
-  - for role in @roles
+  - @roles.each do |role|
     tr
       td= role.name
       td= role.beskrivning
-      td.nobg= link_to "Visa", role
-      td.nobg= link_to "Ändra", edit_role_path(role)
-      td.nobg= link_to "Radera", role, confirm: 'Är du säker?', method: :delete
-p
-  = link_to 'Ny Roll', new_role_path
+      td= link_to 'Visa', role, class: 'btn'
+      td= link_to_edit role
+      td= link_to_destroy role
+p= link_to_new Role if can? :create, Role

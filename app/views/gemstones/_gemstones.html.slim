@@ -16,8 +16,6 @@ table.table
       td= gemstone.chakras.count if gemstone.chakras.present?
       td= gemstone.energies.count if gemstone.energies.present?
 
-br
-
 /= hidden_field_tag :direction, params[:direction]
 /= hidden_field_tag :sort, params[:sort]
 = paginate @gemstones

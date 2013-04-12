@@ -39,6 +39,6 @@ p
   strong Uppdaterad
   = @gemstone.updated_at
 
-= link_to 'Ändra', edit_gemstone_path(@gemstone) if can? :update, Gemstone
-= link_to 'Radera', @gemstone, confirm: 'Är du säker?', method: :delete if can? :destroy, Gemstone
-= link_to 'Tillbaka', gemstones_path
+=' link_to 'Tillbaka', gemstones_path, class: 'btn'
+=' link_to_edit @gemstone if can? :update, Gemstone
+=' link_to_destroy @gemstone if can? :destroy, Gemstone
