@@ -5,3 +5,4 @@ db/*.sql
 log/*
 tmp/**/*
 public/assets/**
+public/images/*
