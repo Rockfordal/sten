@@ -1,0 +1,11 @@
+sv:
+  helpers:
+    link_to:
+      new: 'Ny %{model}'
+      show: 'Visa'
+      index: 'Visa Alla'
+      #index: '%{model}'
+      edit: 'Ändra'
+      destroy: 'Radera'
+      destroy_confirm: 'Är du säker?'
+      back: 'Tillbaka'
