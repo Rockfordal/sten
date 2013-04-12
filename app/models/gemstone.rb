@@ -31,7 +31,7 @@ class Gemstone < ActiveRecord::Base
     if search
       where('gemstones.name LIKE ? OR gemstones.desc LIKE ? ', "%#{search}%", "%#{search}%")
     else
-      scoped
+      all
     end
   end
 end
