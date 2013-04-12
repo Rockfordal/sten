@@ -8,8 +8,30 @@
     <%= yield(:head) %>
   </head>
   <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <%#<a class="brand" href="#">Sten</a>%>
+          <ul class="nav">
+            <li class="active"><a href="/">Stenar</a></li>
+            <li><a href="/colors">Färger</a></li>
+            <li><a href="/chakras">Chakran</a></li>
+            <li><a href="/energies">Energier</a></li>
+            <%#<li><a href="/properties">Egenskaper</a></li>%>
+            <li><a href="/images">Bilder</a></li>
+            <%= raw '<li><a href="/users">Användare</a></li>' if can? :destroy, User %>
+            <%= raw '<li><a href="/roles">Roller</a></li>' if can? :destroy, Role%>
+            <%= raw '<li><a href="/links">Länkar</a></li>' if can? :create, Link %>
+            <%= raw '<li><a href="/linktypes">Länktyper</a></li>' if can? :destroy, Linktype %>
+            <%= raw '<li><a href="/login">Logga in</a></li>' unless current_user %>
+            <%= raw '<li><a href="/logout">Logga ut</a></li>' if current_user %>
+          </ul>
+        </div>
+      </div>
       <div class="notice"><%= flash[:notice] %></div>
-      <%= content_tag :h1, yield(:title) %>
+      <%= content_tag :h2, yield(:title) %>
       <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
