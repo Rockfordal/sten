@@ -2,11 +2,9 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new # gäst 
+    user ||= User.new # gäst
 
-   if user.has_role? :admin
-      can :manage, :all
-   end
+    can :manage, :all if user.has_role? :admin
 
    if user.has_role? :skapare
      can :new, [Gemstone, Color]
@@ -16,5 +14,4 @@ class Ability
 
    can :read, [Gemstone, Chakra, Energy, Color, Image]
   end
-
 end
