@@ -13,4 +13,10 @@ class ColorsController < InheritedResources::Base
     update! { colors_url }
   end
 
+  private
+
+  def color_params
+    params.require(:color).permit(:name, :desc)
+  end
+
 end
