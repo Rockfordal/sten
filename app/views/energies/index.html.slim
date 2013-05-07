@@ -1,5 +1,5 @@
 - cache('en') do
-  br/
+  br
   table
     tr
       th Namn
@@ -8,7 +8,7 @@
       tr
         td= link_to energy.name, energy
         td align="center"
-          - if energy.desc.presence
+          - if energy.info.presence
             ja
           - else
             nej
