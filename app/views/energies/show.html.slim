@@ -4,8 +4,8 @@ p
   = @energy.name
 p
   strong Beskrivning:
-  = @energy.desc
+  = @energy.info
 p
   = link_to 'Ändra', edit_energy_path(@energy) if can? :update, Energy and can? :update, @energy
-  = link_to 'Radera', @energy, :confirm => 'Är du säker?', :method => :delete if can? :destroy, Energy
-  = link_to 'Visa alla', energies_path, :method => 'get'
+  = link_to 'Radera', @energy, confirm: 'Är du säker?', method: :delete if can? :destroy, Energy
+  = link_to 'Visa alla', energies_path, method: 'get'
