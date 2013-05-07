@@ -1,12 +1,18 @@
 class EnergiesController < ApplicationController
+  before_filter :new_energy, only: [:new, :create]
+  #before_filter do
+    #params[:energy] &&= energy_params
+  #end
+
+  #filter_resource_access
+  #include Heimdallr::Resource
   load_and_authorize_resource
+
+  #cancan fix för Rails4 strong params
+  #before_action :set_energy, only: [:show, :edit, :update, :destroy]
 
   def index
     @energies = Energy.all
-  end
-
-  def show
-    @energy = Energy.find params[:id]
   end
 
   def new
@@ -14,33 +20,44 @@ class EnergiesController < ApplicationController
   end
 
   def create
-    @energy = Energy.new(params[:energy])
+    @energy = Energy.new(energy_params)
+
     if @energy.save
-      flash[:notice] = 'Energin har skapats.'
-      redirect_to @energy
+      redirect_to @energy, notice: 'Energin har skapats.'
     else
-      render 'new'
+      render :new
     end
   end
 
-  def edit
-    @energy = Energy.find params[:id]
-  end
-
   def update
-    @energy = Energy.find params[:id]
-    if @energy.update_attributes(params[:energy])
-      flash[:notice] = 'Energin har uppdaterats.'
-      redirect_to @energy
+    if @energy.update_attributes(energy_params)
+      redirect_to @energy, notice: 'Energin har uppdaterats.'
     else
-      render 'edit'
+      render :edit
     end
   end
 
   def destroy
-    @energy = Energy.find params[:id]
     @energy.destroy
-    flash[:notice] = 'Energi raderad.'
-    redirect_to energies_url
+    redirect_to energies_url, notice: 'Energi raderad.'
+  end
+
+  private
+
+  def set_energy
+    @energy = Energy.find(params[:id])
+  end
+
+  def new_energy
+    @energy = Energy.new(safe_params)
+  end
+
+  def energy_params
+    #if admin?
+      params.require(:energy).permit!
+    #else
+      #params.require(:energy).permit(:name)
+      #params.require(:energy).permit(:name, :info)
+    #end
   end
 end
