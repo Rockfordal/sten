@@ -1,21 +1,23 @@
 source 'http://bundler-api.herokuapp.com'
 #source 'http://rubygems.org'
-  gem 'rails',     github: 'rails/rails'
-  gem 'journey',   github: 'rails/journey'
-  gem 'arel',      github: 'rails/arel'
+  gem 'rails',     '4.0.0.rc1'
+  #gem 'journey',   github: 'rails/journey'
+  #gem 'arel',      github: 'rails/arel'
   gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
+  #gem 'protected_attributes'
 
   gem 'mysql2'
   gem 'therubyracer'
   gem 'jquery-rails', github: 'rails/jquery-rails'
-  gem 'je'
+  #gem 'je'
 
-  group :assets do
-    gem 'sprockets-rails', github: 'rails/sprockets-rails'
-    gem 'sass-rails',      github: 'rails/sass-rails'
-    gem 'coffee-rails',    github: 'rails/coffee-rails'
-    gem 'uglifier' #, '>=1.0.3'
-  end
+  #gem 'sprockets-rails', github: 'rails/sprockets-rails'
+  #gem 'sass-rails',      github: 'rails/sass-rails'
+  #gem 'coffee-rails',    github: 'rails/coffee-rails'
+  gem 'sass-rails',      '~> 4.0.0.rc1'
+  gem 'coffee-rails',    '~> 4.0.0'
+  gem 'uglifier',        '>= 1.3.0'
+
 
   gem 'mysql2psql'
   gem 'psych'
@@ -28,17 +30,13 @@ source 'http://bundler-api.herokuapp.com'
   gem 'slim'
   gem 'inherited_resources'
   gem 'turbolinks'
-<<<<<<< HEAD
+  gem 'rip_hashrocket' #syntax_fix
+
   gem 'acts_as_commentable'
   gem 'link_to_action', github: 'Rockfordal/link_to_action'
   #gem 'strong_parameters' #, github: 'rails/strong_parameters'
-=======
->>>>>>> gem: tb -je -simplenav
-  gem 'rip_hashrocket' #syntax_fix
   gem 'annotate'
   gem 'puma'
-  gem 'acts_as_commentable'
-  #gem 'strong_parameters' #, github: 'rails/strong_parameters'
   #gem 'simple-navigation'
   #gem 'copycopter_client', '2.0.0'
   #gem 'slim-rails' # gem 'slim' #, '1.1.0'
