@@ -22,10 +22,12 @@ Sten3::Application.configure do
   config.active_support.deprecation = :log
 
   # Only use best-standards-support built into browsers
-  config.action_dispatch.best_standards_support = :builtin
+  #config.action_dispatch.best_standards_support = :builtin /ej i rails 4
 
   # Do not compress assets
-  config.assets.compress = false
+  config.assets.compress = false #ej i rails4
+
+  config.assets.js_compressor = :uglifier
 
 # Expands the lines which load the assets
   config.assets.debug = true
