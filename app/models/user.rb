@@ -42,6 +42,14 @@ class User < ActiveRecord::Base
     #where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.strip.downcase }]).first
   #end
 
+  def admin?
+    has_role? :admin
+  end
+
+  def role_symbols
+    (roles || []).map { |r| r.name.underscore.to_sym }
+  end
+
   def has_role?(role_sym)
     roles.any? { |r| r.name.underscore.to_sym == role_sym }
   end
