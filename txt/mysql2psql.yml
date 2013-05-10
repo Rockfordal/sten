@@ -1,24 +1,20 @@
 mysql:
- adapter: mysql2
- encoding: utf8
+ #socket: /tmp/mysql.sock
+ hostname: 127.0.0.1
+ port: 3306
  database: gemstone_dev
- host: 192.168.0.10
- pool: 5
- #reconnect: true
- username: root
- #username: andersl
- #password: tjenispenis12345
- #socket: /var/lib/mysql/mysql.sock
+ username: andersl
+ password: tjenispenis12345
 
 destination:
  # if file is given, output goes to file, else postgres
- file: 
+ file:
  postgres:
   hostname: localhost
   port: 5432
-  #username: mysql2psql
-  #password: 
-  database: gemstone
+  database: gemstone_dev
+  username: andersl
+  password: tjenispenis12345
 
 # if tables is given, only the listed tables will be converted.  leave empty to convert all tables.
 #tables:
