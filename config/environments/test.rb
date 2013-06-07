@@ -35,4 +35,8 @@ Sten3::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  Devise.setup do |config|
+    config.stretches = 1
+  end
 end
